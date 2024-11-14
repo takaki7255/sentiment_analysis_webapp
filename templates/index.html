@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sentiment analysis</title>
+    <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script defer src="{{ url_for('static', filename='script.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class ="title">
+            <h1>本音と建前・嫌味検出</h1>
+        </div>
+        <button id="js-button" class="play-button" onClick="vr_function();">
+            <svg enable-background="new 0 0 405.102 405.103" height="100%"
+            width="100%" viewBox="0 0 405.102 405.103" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="m320.893 205.965c0-5.359-4.345-9.703-9.703-9.703-.19 0-.932 0-1.123 0h-36.713v-125.459c0-39.039-31.763-70.803-70.803-70.803s-70.801 31.764-70.801 70.803v125.459h-36.464c-.234 0-1.139 0-1.374 0-5.358 0-9.703 4.344-9.703 9.703 0 61.979 47.909 112.944 108.638 117.899v61.832h-47.576c-5.359 0-9.703 4.345-9.703 9.703s4.344 9.703 9.703 9.703h114.565c5.357 0 9.703-4.345 9.703-9.703s-4.346-9.703-9.703-9.703h-47.582v-61.832c60.729-4.955 108.639-55.921 108.639-117.899zm-169.738-8.141h102.792v9.902c0 28.347-23.059 51.406-51.396 51.406s-51.396-23.062-51.396-51.406zm51.396-178.418c28.339 0 51.396 23.053 51.396 51.396v107.615h-102.792v-107.614c0-28.344 23.057-51.397 51.396-51.397zm-98.442 196.262h28.114c3.965 35.314 33.975 62.867 70.328 62.867s66.363-27.553 70.328-62.867h28.114c-4.893 50.006-47.165 89.221-98.442 89.221-51.278 0-93.551-39.215-98.442-89.221z" />
+            </svg>
+        </button>
+        <div id="js-status" class="status">※停止中</div>
+        <div id="js-result" class="text"></div>
+        <div id="js-message" class="judge_message"></div>
+    </div>
+</body>
+</html>
